@@ -1,0 +1,88 @@
+
+//Общие настройки шрифта
+    
+body
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 1.6rem
+    color: $color-gray
+    letter-spacing: .2rem
+    line-height: 1.9rem
+    @include respond(phone)
+        letter-spacing: 0
+
+// Заголовок главной страницы
+
+.title-first
+    color: $color-white
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation-name: upToDown
+        animation-delay: .8s
+        animation-duration: 1s
+        animation-fill-mode: forwards
+        animation-timing-function: ease
+        opacity: 0
+        backface-visibility: hidden
+        @include respond(tab-port)
+            font-size: 3rem
+            line-height: 5rem
+            letter-spacing: .5rem
+    &__secondary
+        display: block
+        font-weight: 300
+        font-size: 4rem
+        line-height: 4rem
+        letter-spacing: .5rem
+        animation-name: visibility
+        animation-delay: 1.8s
+        animation-duration: 1.2s
+        animation-fill-mode: forwards
+        animation-timing-function: ease
+        opacity: 0
+        margin-bottom: 5rem
+        backface-visibility: hidden
+        @include respond(tab-port)
+            font-size: 2rem
+            line-height: 3rem
+            letter-spacing: .25rem
+            margin-bottom: 10rem
+
+.title-secondary
+    text-align: center
+    text-transform: uppercase
+    font-weight: 800
+    font-size: 3.6rem
+    line-height: 4.3rem
+    letter-spacing: 1rem
+    background: linear-gradient(90deg, $color-brown 3.65%, $color-brown-dark 100%)
+    -webkit-background-clip: text
+    color: transparent
+    transition: all 1s
+    backface-visibility: hidden
+    text-shadow: $box-shadow
+    &:hover
+        transform: scale(1.05,1.05) translateY(-1rem)
+        text-shadow:$shadow-h2
+    &_white
+        color: $color-white
+    @include respond(tab-port)
+        font-size: 3rem
+        line-height: 3.6rem
+        letter-spacing: .5rem
+
+
+.title-third
+    font-weight: 700
+    font-size: 2rem
+    line-height: 2.4rem
+    letter-spacing: .2rem
+
+.paragraph-about
+    line-height: 140%

@@ -1,0 +1,31 @@
+
+//Обнуление всех отступов
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+//Основной размер для 1rem
+html
+    font-size: 62.5% // 10px
+    @include respond(tab-land)
+        font-size: 55%
+    @include respond(tab-port)
+        font-size: 55%
+    @include respond(phone)
+        font-size: 40%
+    @include respond(big-screen)
+        font-size: 75%
+
+//Белая рамка для сайта
+body
+    padding: 5rem
+    border-color: $color-white
+    @include respond(tab-port)
+        padding: 1rem
+
+//Цвет фона контентной части сайта
+.container
+    background-color: #FAFAFA
+    position: relative
+    z-index: 0

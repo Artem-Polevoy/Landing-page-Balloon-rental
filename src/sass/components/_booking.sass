@@ -1,0 +1,114 @@
+.booking-bg
+    height: 50rem
+    background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 55%, rgba(0,0,0,0) 55%), url("../img/section-seventh-background.jpg") no-repeat center / cover
+    border-radius: .3rem
+    box-shadow: $box-shadow
+    @include respond(tab-land)
+        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 62%, rgba(0,0,0,0) 62%), url("../img/section-seventh-background.jpg") no-repeat center / cover
+    @include respond(tab-port)
+        background: linear-gradient(110deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 100%, rgba(0,0,0,0) 100%), url("../img/section-seventh-background.jpg") no-repeat center / cover
+        height: auto
+        width: 100%
+.form
+    width: 65%
+    padding: 5rem 0 0 5rem
+    @include respond(tab-land)
+        padding: 1.8rem 0 0 1.8rem
+        width: 74.5%
+    @include respond(tab-port)
+        display: inline-block
+        text-align: center
+        padding-top: 5rem
+        width: 100%
+        padding-left: 0
+    &__group:not(:last-child)
+        margin-bottom: 5rem
+        @include respond(tab-port)
+            font-size: 2rem
+    &__group:not(:nth-child(4))
+        margin-bottom: 3rem
+        @include respond(tab-port)
+
+    &__input
+        color: $color-black
+        padding: 1.8rem 2.5rem
+        border-radius: .3rem
+        background: $color-white
+        width: 75%
+        border: none
+        box-shadow: $box-shadow
+        &:focus
+            outline: none
+            border-bottom: .2rem solid #66D763
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+        &:checked
+            width: 2rem
+            height: 2rem
+            background: #BA8554
+            border-radius: 50%
+    &__label
+        display: block
+        margin-left: 1.5rem
+        transition: all .5s
+        &_check
+            cursor: pointer
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-0.3rem)
+    &__group-radio
+        position: relative
+        display: inline-block
+        @include respond(tab-port)
+            display: block
+            width: 65%
+            margin: 3rem auto
+    &__input-radio
+        -webkit-appearance: none
+        appearance: none
+        position: absolute
+        
+
+    &__label-radio
+        cursor: pointer
+        padding-left: 4.2rem
+        margin-right: 2.4rem
+        text-shadow: $box-shadow
+    &__group-radio-button
+        content: ""
+        position: absolute
+        top: -.6rem
+        left: 0
+        border: .4rem solid #BA8554
+        border-radius: 50%
+        width: 3rem
+        height: 3rem
+        @include respond(tab-port)
+            width: 4rem
+            height: 4rem
+        background: transparent
+        box-shadow: $box-shadow
+        &::before
+            content: ""
+            position: absolute
+            top:  50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            border-radius: 50%
+            background: $color-brown-light
+            width: 1.4rem
+            height: 1.4rem
+            opacity: 0
+    &__input-radio:checked + &__label-radio &__group-radio-button::before
+        opacity: 1
+
+
+
+
+
+
+
+
+
+
