@@ -4,7 +4,7 @@
 
 :wrench: export graphics from figma<br>
 :wrench: BEM methodology<br>
-:wrench: building on a float grid<br>
+:wrench: float layout grid<br>
 :wrench: :hoover animation<br>
 :wrench: SASS<br>
 :wrench: responsive layout :iphone: <br>
